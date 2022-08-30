@@ -1,4 +1,5 @@
 from src.deep_profane import tfhub_bert_handle
+from src.deep_profane import model_weights
 
 # deep learning
 import tensorflow as tf
@@ -13,7 +14,8 @@ class ProfanityValidator:
         self.model = self.build_classifier_model('small_bert/bert_en_uncased_L-4_H-512_A-8')
 
         print("Loading weights...")
-        self.model.load_weights('weights/bert/')
+        weight = model_weights.fetch_weights('small-bert')
+        self.model.load_weights(weight)
         
         print("Model initialized!")
 
