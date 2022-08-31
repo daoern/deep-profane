@@ -1,5 +1,5 @@
-from src.deep_profane import tfhub_bert_handle
-from src.deep_profane import model_weights
+from . import tfhub_bert_handle
+from . import model_weights
 
 # deep learning
 import tensorflow as tf
